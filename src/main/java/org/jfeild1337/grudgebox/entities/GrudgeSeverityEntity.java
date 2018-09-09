@@ -1,14 +1,13 @@
 package org.jfeild1337.grudgebox.entities;
 
+import java.io.Serializable;
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
-@Table(name = "GRUDGE_SEVERITY", schema = "GRUDGE", catalog = "")
-public class GrudgeSeverityEntity {
+@Table(name = "GRUDGE_SEVERITY", schema = "GRUDGE")
+public class GrudgeSeverityEntity implements Serializable {
     private int severityLevel;
     private String severityText;
-    private Collection<GrudgeRecordEntity> grudgeRecordsBySeverityLevel;
 
     @Id
     @Column(name = "SEVERITY_LEVEL")
@@ -48,14 +47,5 @@ public class GrudgeSeverityEntity {
         int result = severityLevel;
         result = 31 * result + (severityText != null ? severityText.hashCode() : 0);
         return result;
-    }
-
-    @OneToMany(mappedBy = "grudgeSeverityBySeverityLevel")
-    public Collection<GrudgeRecordEntity> getGrudgeRecordsBySeverityLevel() {
-        return grudgeRecordsBySeverityLevel;
-    }
-
-    public void setGrudgeRecordsBySeverityLevel(Collection<GrudgeRecordEntity> grudgeRecordsBySeverityLevel) {
-        this.grudgeRecordsBySeverityLevel = grudgeRecordsBySeverityLevel;
     }
 }

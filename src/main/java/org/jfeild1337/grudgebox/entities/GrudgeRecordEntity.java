@@ -1,11 +1,12 @@
 package org.jfeild1337.grudgebox.entities;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "GRUDGE_RECORD", schema = "GRUDGE", catalog = "")
-public class GrudgeRecordEntity {
+@Table(name = "GRUDGE_RECORD", schema = "GRUDGE")
+public class GrudgeRecordEntity implements Serializable {
     private int recordId;
     private String grudgeText;
     private Timestamp grudgeCreatedDate;
