@@ -31,9 +31,9 @@ Refer to the Grudge Box User's Manual for guidance on using the tool. TODO: writ
 This is just a goofy side project for me since it's been a while since I did anything with Hibernate/JPA or any Java 
 UI development. I've been talking about the "grudge box" concept since at least 2013, and have been telling people
 that their annoying actions have been earning them spots in my theoretical grudge box. After several years of talking
-and joking, though, I was finally inspired in September 2018 to translate the grudge box concept from a mere idea into
+and joking, though, I was finally inspired to translate the grudge box concept from a mere idea into
 an actual database and the software to interact with that database.
 
 ## Dedication
-This project is dedicated to my very dear friend, who shall only be named here as #CB2, who inspired me to make the 
+This project is dedicated to my very dear friend Aaron, who annoyed me enough to make the 
 Grudge Box a reality.
